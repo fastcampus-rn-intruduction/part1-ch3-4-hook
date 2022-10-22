@@ -1,12 +1,14 @@
 // 시작 전 App.js 코드
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import StateWithClassComponent from "./StateWithClassComponent";
+import StateWithFuctionalComponent from "./StateWithFuctionalComponent";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* <StateWithClassComponent /> */}
+      <StateWithFuctionalComponent />
     </View>
   );
 }
