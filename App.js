@@ -1,18 +1,23 @@
 // 시작 전 App.js 코드
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { useState } from "react";
+import { Button, StyleSheet, Text, View } from "react-native";
 import StateWithClassComponent from "./StateWithClassComponent";
 import StateWithFuctionalComponent from "./StateWithFuctionalComponent";
 import UseEffectWithClassComponent from "./UseEffectWithClassComponent";
 import UseEffectWithFunctionalComponent from "./UseEffectWithFunctionalComponent";
 
 export default function App() {
+  const [isTrue, setIsTrue] = useState(true);
   return (
     <View style={styles.container}>
       {/* <StateWithClassComponent /> */}
       {/* <StateWithFuctionalComponent /> */}
-      <UseEffectWithClassComponent />
-      {/* <UseEffectWithFunctionalComponent /> */}
+      {/* {isTrue ? <UseEffectWithClassComponent /> : null} */}
+      {/* {isTrue && <UseEffectWithClassComponent />} */}
+      <UseEffectWithFunctionalComponent />
+
+      <Button title="toggle" onPress={() => setIsTrue(!isTrue)} />
     </View>
   );
 }
